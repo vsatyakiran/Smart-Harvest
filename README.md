@@ -1,5 +1,5 @@
 # Smart-Harvest
-It is a crop recommendation and fertilizer recommendation system, which is developed using machine learning algorithms made our team win **"Hack2Impact"** Hackthon , which is intercollege hackthon where 38 teams participated from 6 different colleges and universities.
+It is a crop recommendation and fertilizer recommendation system, which is developed using machine learning algorithms made our team @Butcher2004 win **"Hack2Impact"** Hackthon , which is intercollege hackthon where 38 teams participated from 6 different colleges and universities.
 
 Main code is available in app.py file and model training code is in app.ipynb.
 The dataset I have used is [Dataset](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset). We have trianed the data with different ml and dl algorithms which includes `SVM`, `Logistic Regression`, ensembling methods like `RandomForestClassifier`, `DecisionTreeClassifier` also we tried `ANN`. The results and accuracy of the models can been seen in the bottom of the readme file.
