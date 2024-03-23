@@ -1,0 +1,209 @@
+
+@import 'mixins';
+@import 'variables';
+
+body
+{
+    @include flex_center(row);
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(180deg, rgb(31, 59, 29),rgba(62, 103, 58, 0.786));
+    gap: 150px;
+}
+
+
+
+
+.location, .Crop_Rec
+{
+    border-radius: 15px;
+    box-shadow: 20px 30px 15px 1px rgba(0, 0, 0, 0.684);
+}
+
+h1
+{
+    color: beige;
+    @include font(futura, 40px, 400);
+    text-align: center;
+}
+.Crop_Rec
+{
+    
+    height: 700px;
+    width: 550px;
+    background-color: rgba(12, 39, 4, 0.758);
+    
+    form
+    {   
+        @include flex_center(column);
+        margin-left: 10%;
+        align-items: baseline;
+        gap: 26px;
+        margin-top: 40px;
+    }
+
+    div
+    {
+        @include flex_center(row);
+        gap: 30px;
+    }
+
+    label
+    {   
+
+        
+       display: block;
+    //    background-color: red;
+        width: 200px;
+        color: white;
+        // letter-spacing: 2px;
+        @include font($medium_text_font, 25px, 500)
+    }
+    select
+    {
+        
+        padding-bottom: 2px;
+        border: none;
+        background: none;
+        outline: none;
+        color: white;
+        width: 186px;
+        text-transform: capitalize;
+        border-bottom: solid white 1px;
+        padding-inline-end: 20px;
+        @include font(lato, 19px, 400);
+        option
+        {
+            text-transform: capitalize;
+            color: black;
+            font-size: 15px;
+        }
+       
+
+    }
+    input
+    {
+        @extend select;
+        width: 166px;
+    }
+    
+
+
+}
+
+
+
+
+.submit
+{
+
+    // margin-top: 2%;
+    // margin-right: 5%;
+    position: relative;
+    left: 50%;
+    float: right;
+    
+
+}
+
+
+
+
+button
+    {
+        opacity: 0.7;
+        border-radius: 5px;
+        box-shadow: 5px 8px 10px 1px black;
+        cursor: pointer;
+        height: 40px;
+        width: 100px;
+        @include font(Lato, 17px, 600);
+        background-image: linear-gradient(blue,rgb(12, 12, 98));
+        color: white;
+        outline: none;
+        border: none;
+        &:active
+        {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 5px 1px black;
+        }
+        &:hover, &:focus
+        {
+            opacity: 1;
+        }
+
+    }
+.Go
+{
+    position: relative;
+    bottom: 5.5%;
+    left: 77%;
+    background-image: none;
+    color: rgb(9, 9, 86);
+    background-color: white;
+}
+
+.fert_go
+{
+    bottom: 8%;
+}
+
+
+.next
+{
+    position: relative;
+   float: right;
+   left: 180%;
+}
+
+
+.location
+{
+    @extend .Crop_Rec;
+
+    height: 300px;
+    width: 400px;
+    background-color: rgba(12, 39, 4, 0.758);
+    form
+    {
+        gap: 58px;
+    }
+    select
+    {
+        width: 186px;
+    }
+
+    label
+    {
+        width: 130px;
+    }
+
+    div
+    {
+        gap: 15px;
+    }
+    input
+    {
+        width: 166px;
+    }
+
+}
+
+.fert
+{
+    @extend .Crop_Rec;
+    height: 450px;
+}
+
+.submit_fert
+{
+    
+    
+    @extend .submit;
+    margin-top: 4%;
+    position: relative;
+    left: 40%;
+    
+   
+
+}

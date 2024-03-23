@@ -1,0 +1,27 @@
+
+
+
+@mixin green_color
+{
+    color: hsl(0 0% 100% / 0.2);
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg, green,rgb(1, 255, 1));
+}
+
+
+@mixin flex_center($direction : row)
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+
+@mixin font($font_name, $font_size, $font_width : 400)
+{
+    font-family: $font_name;
+    font-size: $font_size;
+    font-weight: $font_width;
+}

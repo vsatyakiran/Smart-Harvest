@@ -1,0 +1,338 @@
+
+
+@import 'variables';
+@import 'mixins';
+
+
+
+
+body
+{
+    color: $page_text_color;
+    background-color: black;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+
+.hero_img
+{
+    height: 100vh;
+    width:97vw;
+    margin-inline:auto;
+    overflow: hidden;
+    img
+    {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    p
+    {
+        line-height: 60px;
+        position: absolute;
+        // letter-spacing: 4px;
+        text-transform: uppercase;
+        // background-color: rgba(0, 0, 0, 0.627);
+        top:20%;
+        left: 21%;
+        margin: 0;
+        z-index: 1; 
+        color: white;
+        font-weight: 900;
+        font-size: 50px;
+        font-family: $Headings_font;
+        span
+        {
+            @include green_color
+            // 
+        }
+
+    }
+    p:last-child
+    {
+        margin-top: 15px;
+        line-height: normal;
+        left: 18%;
+        text-wrap: balance;
+        text-transform: none;
+        font-family: $medium_text_font;
+        font-weight: 400;
+        top: 40%;
+        font-size: 20px;
+    }
+    
+    
+}
+
+
+
+.quote
+{
+    @include flex_center(column);
+    height: 70vh;
+    font-family: futura;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    
+    span
+    {
+        color: hsl(0 0% 100% / 0.2);
+        background-clip: text;
+        background-repeat: no-repeat;
+        background-size: 0 100%;
+        // background-image: url(/images/green_harvest_1.jpg);
+        background-image: linear-gradient(90deg, rgb(108, 146, 120),rgb(1, 255, 1),rgb(1, 255, 115));
+        animation: scroll_reveal linear forwards;
+        animation-timeline: view();
+        animation-range-start: contain 1vh;
+        animation-range-end: cover 55vh;
+    }
+    
+}
+
+
+.buttons
+{
+    position: absolute;
+    left: 38%;
+    top: 65%;
+    @include flex_center(row);
+    gap: 80px;
+    button
+    {
+        cursor: pointer;
+        border: none;
+        
+        @include font($medium_text_font,18px,500);
+        color: white;
+        background-color: green;
+        height: 50px;
+        width: 150px;
+    }
+    .learn
+    {
+        color: Green;
+        background-color: white
+        ;
+        
+
+    }
+}
+
+
+
+.why
+{
+    background-color: rgb(24, 24, 24);
+    height: 100vh;
+    width:90vw;
+    margin-inline: auto;
+    padding-top: 0.5px;
+    h1
+    {
+        @include font($Headings_font, 45px, 800);
+        text-transform: uppercase;
+        text-align: center;
+        span
+        {
+            @include green_color;
+        }
+    }
+    h2
+    {
+        // background-color: rgba(0, 0, 0, 0.423);
+        padding-inline: 5px;
+        margin: 0;
+        width: fit-content;
+        height: fit-content;
+        @include font(futura, 70px, 600);
+        position: relative;
+        z-index: 1;
+        top: 50%;
+        float: right;
+        margin-right: 6%;
+    }
+
+
+    
+}
+
+
+
+.scroll
+{
+    opacity: 0.5;
+    margin-top: -80px;
+    margin-left: 67px;
+    height: 60%;
+    width: 90%;
+    object-fit: cover;
+    
+}
+
+
+
+
+
+
+.img_content
+{
+    @include font($medium_text_font, 25px, 400);
+    min-height: 172px;
+    padding-top: 20px;
+    padding-inline:5%;
+    text-align: center;
+}
+
+.icon
+{
+
+   
+    @include flex_center(row);
+    gap: 1280px;
+    z-index: 1;
+    position: relative;
+    bottom:60%;
+
+    i
+    {
+        font-size: 50px;
+        color: white;
+        cursor:pointer;
+        
+    }
+}
+
+.fa-chevron-left:active
+{
+    transform: translateX(-5px);
+}
+
+.fa-chevron-right:active
+{
+    transform: translateX(5px);
+}
+
+
+
+
+.start
+{
+    @extend .why;
+    margin-top: 6%;
+    background-color : rgb(62, 103, 58);
+
+    // padding-inline: 1%;
+    h1
+    {
+        float: left;
+        margin-left: 10%;
+        margin-top: 15%;
+        span
+        {
+            border-radius: 5%;
+            padding-inline: 6px;
+            color: rgb(62, 103, 58);
+            background-clip: unset;
+            background-repeat: unset;
+            background-color: white;
+            background-image: none;
+        }
+    }
+    img
+    {
+        float: right;
+        height: 380px;
+        margin-top: -30px;
+        
+    }
+
+    button
+    {
+        i
+        {
+            opacity: 0;
+        }
+        
+        box-shadow: 10px 15px 20px 1px rgba(0, 0, 0, 1);
+        position: relative;
+        z-index: 1;
+        width: fit-content;
+        left: 30%;
+        top: 30%;
+        border: none;
+        cursor: pointer;
+        // border: solid white 3px;
+        @include font($medium_text_font, 25px, 600);
+        border-radius: 5px;
+        text-decoration: none;
+        color: rgb(62, 103, 58);
+        padding-block: 15px;
+        padding-inline: 20px;
+        background-color: white;
+        &:active
+        {
+            box-shadow: 5px 10px 10px 1px rgba(0, 0, 0, 1);
+            transform: translate(2px, 2px);
+        }
+        &:hover
+        {
+            i
+            {
+                
+                animation: move_op 0.2s linear forwards ;
+            }
+        }
+    
+    }
+
+    p
+    {
+
+       text-wrap: balance;
+       position: relative;
+       right: 33%;
+       top: 40%;
+        @include font($medium_text_font, 25px, 500);
+        span
+        {
+            font-size: 35px;
+        }
+    }
+}
+
+
+@keyframes move_op 
+{
+    0%
+    {
+        opacity : 1;
+    }
+    100%
+    {
+        opacity : 1;
+        transform: translateX(115px);
+
+    }
+}
+
+
+@keyframes opacity
+{
+    100%
+    {
+        opacity:0.5;
+    }
+}
+
+
+@keyframes  scroll_reveal
+{
+    to
+    {
+        background-size: 100% 100%;
+    }
+}

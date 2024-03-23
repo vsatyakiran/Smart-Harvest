@@ -1,0 +1,41 @@
+@import 'variables';
+@import 'mixins';
+
+body
+{
+    @include flex_center(column);
+    background-image: linear-gradient(270deg, #0a300a, #0a300ac7, #0a300ac7, #0a300a);
+}
+
+h1
+{
+    @include font(futura, 60px, 300);
+    color: rgb(27, 21, 21);
+    text-transform: uppercase;
+    width: 610px;
+    span
+    {
+        color: rgb(48, 91, 55);
+        background-color: rgb(27, 21, 21);
+        padding-inline: 2%;
+    }
+}
+
+.content
+{
+    background-color: grey;
+    width: 50vw;
+    padding: 10px;
+    padding-inline:8%;
+    margin-bottom: 10px;
+    height : fit-content;
+    border-radius: 2%;
+
+    p
+    {
+        @include font(Lato, 23px, 600);
+        text-wrap: wrap;
+        
+    }
+
+}

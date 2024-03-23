@@ -1,0 +1,159 @@
+@import 'mixins';
+@import 'variables';
+
+
+body
+{
+    margin: 0;
+    background-color: #000000;
+    @include flex_center(column);
+    margin: auto;
+    width: 90vw;
+}
+
+h1{
+    @include font(futura, 60px, 500);
+    color: grey;
+    span
+    {
+        
+        color: rgb(32, 78, 32);
+    }
+}
+
+
+.optimal
+{
+    text-align: center;
+    width: 100%;
+    padding-block: 3%;
+    background-color: #1d311d;
+    color: white;
+    margin-top: 0;
+    @include font(Lato, 45px, 500);
+    span
+    {
+        text-transform: capitalize;
+        color: green;
+    }
+
+}
+
+
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.icons
+{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 80vh;
+    gap: 40px;
+    .i
+    {
+        cursor: pointer;
+        display: block;
+        background-color: grey;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 5%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        outline: 0;
+        &:hover
+        {
+            transform: translate(2px,5px);
+        }
+        // height: 300px;
+    }
+    .icon
+    {
+        
+        
+        
+        height: 100px;
+        width: 150px;
+        border-radius: 5%;
+        
+        background-image: linear-gradient(90deg,green, rgb(22, 54, 13));
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        margin: 5px;
+        @include flex_center(column); 
+
+        &:hover
+        {
+            // transform: translate(2px,5px);
+            animation: fill 0.3s linear forwards;
+        } 
+    }
+    
+    p
+    {
+        margin: 0;
+        margin-top: 5px;
+        @include font(Lato, 20px, 500)
+    }
+    img
+    {
+        height: 40px;
+    }
+    
+}
+
+
+.gainers
+{
+    h2
+    {
+        @include font(Futura, 40px, 400);
+       color: rgb(32, 78, 32);
+        
+    }
+    p
+    {
+        text-align: center;
+        @include font(Lato, 30px, 400);
+        color: white;
+        text-transform: capitalize;
+    }
+}
+
+.loosers
+{
+    @extend .gainers;
+    display: none;
+}
+
+h1
+{
+    @include font($Headings_font, 60px, 500);
+    // margin-bottom: 0;
+}
+
+.container
+{
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // gap: 400px;
+}
+
+
+
+
+
+
+@keyframes fill 
+{
+    100%
+    {
+        background-size: 100% 100%;
+
+    }
+}
+

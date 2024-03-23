@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("./Helvetica.ttf");
+}
+@font-face {
+  font-family: "futura";
+  src: url("./Futura Bold font.ttf");
+}
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-image: url("/static/images/agri_5_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  gap: 80px;
+  height: 100vh;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-size: 50px;
+  font-weight: 600;
+  position: absolute;
+  top: 20px;
+}
+
+a {
+  margin-top: 50px;
+  text-decoration: none;
+}
+
+.Crop_rec, .Fertilizer {
+  height: 500px;
+  width: 400px;
+  border-radius: 2%;
+  opacity: 0.8;
+  overflow: hidden;
+  cursor: pointer;
+}
+.Crop_rec:hover, .Fertilizer:hover {
+  animation: big 0.2s forwards linear;
+}
+.Crop_rec img, .Fertilizer img {
+  height: 500px;
+  width: 400px;
+}
+.Crop_rec p, .Fertilizer p {
+  z-index: 0;
+  bottom: 25%;
+  padding-block: 3%;
+  text-align: center;
+  font-family: futura;
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  background-color: rgb(41, 35, 35);
+  height: 50px;
+  color: white;
+}
+
+@keyframes big {
+  100% {
+    opacity: 1;
+    height: 550px;
+    width: 400px;
+  }
+}/*# sourceMappingURL=Choose.css.map */

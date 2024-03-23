@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("./Helvetica.ttf");
+}
+@font-face {
+  font-family: "futura";
+  src: url("./Futura Bold font.ttf");
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0;
+  height: 100vh;
+  background-image: linear-gradient(180deg, rgb(31, 59, 29), rgba(62, 103, 58, 0.786));
+  gap: 150px;
+}
+
+.location, .Crop_Rec, .fert {
+  border-radius: 15px;
+  box-shadow: 20px 30px 15px 1px rgba(0, 0, 0, 0.684);
+}
+
+h1 {
+  color: beige;
+  font-family: futura;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.Crop_Rec, .fert, .location {
+  height: 700px;
+  width: 550px;
+  background-color: rgba(12, 39, 4, 0.758);
+}
+.Crop_Rec form, .fert form, .location form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 10%;
+  align-items: baseline;
+  gap: 26px;
+  margin-top: 40px;
+}
+.Crop_Rec div, .fert div, .location div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+}
+.Crop_Rec label, .fert label, .location label {
+  display: block;
+  width: 200px;
+  color: white;
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 500;
+}
+.Crop_Rec select, .fert select, .location select, .Crop_Rec input, .fert input, .location input {
+  padding-bottom: 2px;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  width: 186px;
+  text-transform: capitalize;
+  border-bottom: solid white 1px;
+  padding-inline-end: 20px;
+  font-family: lato;
+  font-size: 19px;
+  font-weight: 400;
+}
+.Crop_Rec select option, .fert select option, .location select option, .Crop_Rec input option, .fert input option, .location input option {
+  text-transform: capitalize;
+  color: black;
+  font-size: 15px;
+}
+.Crop_Rec input, .fert input, .location input {
+  width: 166px;
+}
+
+.submit, .submit_fert {
+  position: relative;
+  left: 50%;
+  float: right;
+}
+
+button {
+  opacity: 0.7;
+  border-radius: 5px;
+  box-shadow: 5px 8px 10px 1px black;
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+  font-family: Lato;
+  font-size: 17px;
+  font-weight: 600;
+  background-image: linear-gradient(blue, rgb(12, 12, 98));
+  color: white;
+  outline: none;
+  border: none;
+}
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 5px 1px black;
+}
+button:hover, button:focus {
+  opacity: 1;
+}
+
+.Go {
+  position: relative;
+  bottom: 5.5%;
+  left: 77%;
+  background-image: none;
+  color: rgb(9, 9, 86);
+  background-color: white;
+}
+
+.fert_go {
+  bottom: 8%;
+}
+
+.next {
+  position: relative;
+  float: right;
+  left: 180%;
+}
+
+.location {
+  height: 300px;
+  width: 400px;
+  background-color: rgba(12, 39, 4, 0.758);
+}
+.location form {
+  gap: 58px;
+}
+.location select, .location input {
+  width: 186px;
+}
+.location label {
+  width: 130px;
+}
+.location div {
+  gap: 15px;
+}
+.location input {
+  width: 166px;
+}
+
+.fert {
+  height: 450px;
+}
+
+.submit_fert {
+  margin-top: 4%;
+  position: relative;
+  left: 40%;
+}/*# sourceMappingURL=details.css.map */

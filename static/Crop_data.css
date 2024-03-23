@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("./Helvetica.ttf");
+}
+@font-face {
+  font-family: "futura";
+  src: url("./Futura Bold font.ttf");
+}
+body {
+  margin: 0;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 90vw;
+}
+
+h1 {
+  font-family: futura;
+  font-size: 60px;
+  font-weight: 500;
+  color: grey;
+}
+h1 span {
+  color: rgb(32, 78, 32);
+}
+
+.optimal {
+  text-align: center;
+  width: 100%;
+  padding-block: 3%;
+  background-color: #1d311d;
+  color: white;
+  margin-top: 0;
+  font-family: Lato;
+  font-size: 45px;
+  font-weight: 500;
+}
+.optimal span {
+  text-transform: capitalize;
+  color: green;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 80vh;
+  gap: 40px;
+}
+.icons .i {
+  cursor: pointer;
+  display: block;
+  background-color: grey;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 5%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+.icons .i:hover {
+  transform: translate(2px, 5px);
+}
+.icons .icon {
+  height: 100px;
+  width: 150px;
+  border-radius: 5%;
+  background-image: linear-gradient(90deg, green, rgb(22, 54, 13));
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.icons .icon:hover {
+  animation: fill 0.3s linear forwards;
+}
+.icons p {
+  margin: 0;
+  margin-top: 5px;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 500;
+}
+.icons img {
+  height: 40px;
+}
+
+.gainers h2, .loosers h2 {
+  font-family: Futura;
+  font-size: 40px;
+  font-weight: 400;
+  color: rgb(32, 78, 32);
+}
+.gainers p, .loosers p {
+  text-align: center;
+  font-family: Lato;
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
+  text-transform: capitalize;
+}
+
+.loosers {
+  display: none;
+}
+
+h1 {
+  font-family: Helvetica;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+@keyframes fill {
+  100% {
+    background-size: 100% 100%;
+  }
+}/*# sourceMappingURL=Crop_data.css.map */

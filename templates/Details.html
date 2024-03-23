@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/details.css">
+    <script defer src="/static/Details.js"></script>
+    <title>Details</title>
+</head>
+
+
+
+<body>
+    <div class="location">
+        <h1>Location</h1>
+        <form action="/weather", method="post">
+            <!-- <div class="feature">
+                <label >State :</label>
+                <select onkeypress="moveToNext(event, 'Zip_code')" name="state" required autocomplete="off">
+                    <option hidden value=""></option>
+                    <option value="andhrapradesh">andhrapradesh</option>
+                    <option value="bihar">bihar</option>
+                    <option value="chattisgarh">chattisgarh</option>
+                    
+                    <option value="gujarat">gujarat</option>
+                    <option value="harayana">harayana</option>
+                    <option value="himachalpradesh">himachalpradesh</option>
+                    <option value="jammukashmir">jammukashmir</option>
+                    <option value="karnataka">karnataka</option>
+                    <option value="kerala">kerala</option>
+                    <option value="madhyapradesh">madhyapradesh</option>
+                    <option value="maharashtra">maharashtra</option>
+                    <option value="northeast">northeast</option>
+                    <option value="orissa">orissa</option>
+                    <option value="punjab">punjab</option>
+                    <option value="rajasthan">rajasthan</option>
+                    <option value="tamilnadu">tamilnadu</option>
+                    <option value="telangana">telangana</option>
+                    <option value="uttarakhand">uttarakhand</option>
+                    <option value="uttarpradesh">uttarpradesh</option>
+                    <option value="westbengal">westbengal</option>
+                </select>
+            </div> -->
+            <div class="feature">
+                <label for="Zip_code">Pin Code :</label>
+                <input type="text" id="Zip_code" onkeypress="moveToNext(event, 'district')" name="zip" required autocomplete="off">
+            </div>
+            <a href="#"><button class="Go next" type="submit" onclick="hide()">Next</button></a>
+            
+        </form>
+    </div>
+    <div class="Crop_Rec">
+        <h1>Crop Growing Conditions</h1>
+        <form action="{{ url_for('prediction') }}" method="post"> 
+            <div class="feature">
+                <label >State :</label>
+                <select name="state" autocomplete="off">
+                    <option hidden value="{{ state }}">{{ state }}</option>
+                    <option value="andhrapradesh">andhrapradesh</option>
+                    <option value="bihar">bihar</option>
+                    <option value="chattisgarh">chattisgarh</option>
+                    <!-- <option value="goa">goa</option> -->
+                    <option value="gujarat">gujarat</option>
+                    <option value="haryana">haryana</option>
+                    <option value="himachalpradesh">himachalpradesh</option>
+                    <option value="jammukashmir">jammukashmir</option>
+                    <!-- <option value="jharkhand">jharkhand</option> -->
+                    <option value="karnataka">karnataka</option>
+                    <option value="kerala">kerala</option>
+                    <option value="madhyapradesh">madhyapradesh</option>
+                    <option value="maharashtra">maharashtra</option>
+                    <option value="northeast">northeast</option>
+                    <option value="orissa">orissa</option>
+                    <option value="punjab">punjab</option>
+                    <option value="rajasthan">rajasthan</option>
+                    <option value="tamilnadu">tamilnadu</option>
+                    <option value="telangana">telangana</option>
+                    <option value="uttarakhand">uttarakhand</option>
+                    <option value="uttarpradesh">uttarpradesh</option>
+                    <option value="westbengal">westbengal</option>
+                </select>
+            </div>
+            <div class="feature">
+                <label >Season :</label>
+                <select id="season_select" name="season" required autocomplete="off">
+                    <option hidden value=""></option>
+                    <option value="kharif">kharif</option>
+                    <option value="rabi">rabi</option>
+                    <option value="perennial">perennial</option>
+                </select>
+            </div>
+            
+            <div class="feature">
+                <label for="temperature">Temperature(&deg;C) :</label>
+                <input type="text" value="{{ temperature }}" name="temp" id="temperature" onkeypress="moveToNext(event, 'humidity')" required autocomplete="off">
+            </div>
+            <div class="feature">
+                <label for="humidity">Humidity :</label>
+                <input type="text" value="{{ humidity }}" name="humidity" id="humidity" onkeypress="moveToNext(event, 'Ph')" required autocomplete="off">
+            </div>
+            <div class="feature">
+                <label for="Ph">pH :</label>
+                <input type="text" name="ph" id="Ph" onkeypress="moveToNext(event, 'rainfall')" required autocomplete="off">
+            </div>
+            <div class="feature">
+                <label for="rainfall">Rainfall(mm) :</label>
+                <input type="text" name="rainfall" id="rainfall" onkeypress="moveToNext(event, 'nitro')" required autocomplete="off">
+            </div>
+            <div class="feature">
+                <label for="nitro">Nitrogen :</label>
+                <input type="text" name="nitrogen" id="nitro" onkeypress="moveToNext(event, 'Pho')" required autocomplete="off">
+            </div>
+            <div class="feature">
+                <label for="Pho">Phosphorous :</label>
+                <input type="text" name="phosphorous" id="Pho" onkeypress="moveToNext(event, 'Pot')" required autocomplete="off"> 
+            </div>
+            <div class="feature">
+                <label for="Pot">Potassium :</label>
+                <input type="text" name="potassium" id="Pot" onkeypress="moveToNext(event, 'sub')" required autocomplete="off">
+            </div>
+            <div class="submit">
+                <a id="sub"><button type="submit">Submit</button></a>
+                
+              </div>
+          </form>
+          <a href="/goback"><button class="Go">Go Back</button></a>
+    </div>
+</body>
+</html>
