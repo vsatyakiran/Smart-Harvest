@@ -32,7 +32,7 @@ We are recommanding the **natural fertilizers** like compost, manure for the spe
 ## Input for Fertilizer Recommendation
 
 ![Screenshot (139)](https://github.com/vsatyakiran/Smart-Harvest/assets/103512987/90056279-ff34-40fc-b963-79c298af4a42)
-## Outpu for the fertilizer recommendation
+## Output for the fertilizer recommendation
 ![Screenshot (140)](https://github.com/vsatyakiran/Smart-Harvest/assets/103512987/8cb6a2e6-9dbf-488c-bf3c-e8063c2827a4)
 
 # Performance of the models
