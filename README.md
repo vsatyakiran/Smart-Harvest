@@ -4,6 +4,8 @@ It is a crop recommendation and fertilizer recommendation system, which is devel
 Main code is available in app.py file and model training code is in app.ipynb.
 The dataset I have used is [Dataset](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset). We have trianed the data with different ml and dl algorithms which includes `SVM`, `Logistic Regression`, ensembling methods like `RandomForestClassifier`, `DecisionTreeClassifier` also we tried `ANN`. The results and accuracy of the models can been seen in the bottom of the readme file.
 
+[![Watch the video]](https://youtu.be/pt6AiM5rAMg?si=AGQ6aHpdSsga__tM)
+
 ## This is our home page:
 
 ![Screenshot (130)](https://github.com/vsatyakiran/Smart-Harvest/assets/103512987/4e1bdfab-ab34-4b7d-a257-8e1b7875a254)
